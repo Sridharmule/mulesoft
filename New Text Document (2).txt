@@ -1,0 +1,48 @@
+<MESSAGE>
+  <HEADER>
+    <TSTZ_ORIGINATING>2020-05-04T12:50:15.936+10:00</TSTZ_ORIGINATING>
+    <COMPONENT_ID>webservices</COMPONENT_ID>
+    <MSG_ID>OWS-04008</MSG_ID>
+    <MSG_TYPE TYPE="TRACE"></MSG_TYPE>
+    <MSG_LEVEL>1</MSG_LEVEL>
+    <HOST_ID>atsapdod04</HOST_ID>
+    <HOST_NWADDR>10.64.21.7</HOST_NWADDR>
+    <MODULE_ID>service</MODULE_ID>
+    <THREAD_ID>87</THREAD_ID>
+    <USER_ID>atsjq01</USER_ID>
+  </HEADER>
+  <CORRELATION_DATA>
+    <EXEC_CONTEXT_ID><UNIQUE_ID>10.64.21.7:57393:1588560594595:5842</UNIQUE_ID><SEQ>0</SEQ></EXEC_CONTEXT_ID>
+  </CORRELATION_DATA>
+  <PAYLOAD>
+    <MSG_TEXT>The JAXRPC servlet has been destroyed for port: {urn:tollgroup:common:internal:specification:wsdl:TOLTAT-1}TOLTATWebService.</MSG_TEXT>
+  </PAYLOAD>
+</MESSAGE>
+<MESSAGE>
+  <HEADER>
+    <TSTZ_ORIGINATING>2020-05-21T11:09:47.688+10:00</TSTZ_ORIGINATING>
+    <COMPONENT_ID>webservices</COMPONENT_ID>
+    <MSG_ID>OWS-04058</MSG_ID>
+    <MSG_TYPE TYPE="TRACE"></MSG_TYPE>
+    <MSG_LEVEL>1</MSG_LEVEL>
+    <HOST_ID>atsapdod04</HOST_ID>
+    <HOST_NWADDR>10.64.21.7</HOST_NWADDR>
+    <MODULE_ID>service</MODULE_ID>
+    <THREAD_ID>10</THREAD_ID>
+    <USER_ID>atsjq01</USER_ID>
+  </HEADER>
+  <CORRELATION_DATA>
+    <EXEC_CONTEXT_ID><UNIQUE_ID>10.64.21.7:40380:1590023387689:0</UNIQUE_ID><SEQ>0</SEQ></EXEC_CONTEXT_ID>
+  </CORRELATION_DATA>
+  <PAYLOAD>
+    <MSG_TEXT>Reading WSM config file.</MSG_TEXT>
+  </PAYLOAD>
+</MESSAGE>
+
+
+
+$ ps -ef| grep jboss
+root      6183     1  0 May28 ?        00:00:00 /bin/sh /users/rhq/rhq-server-4.7.0/jbossas/bin/standalone.sh -P /users/rhq/rhq-server-4.7.0/bin/rhq-server.properties
+root      6221  6183  0 May28 ?        01:19:44 /users/rhq/jdk1.6.0_38/bin/java -D[Standalone] -XX:+UseCompressedOops -Dapp.name=rhq-server -Xms1024M -Xmx3072M -XX:PermSize=256M -XX:MaxPermSize=512M -Djava.net.preferIPv4Stack=true -Dorg.jboss.resolver.warning=true -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Drhq.server.home=/users/rhq/rhq-server-4.7.0 -Djboss.server.log.dir=/users/rhq/rhq-server-4.7.0/logs -Djava.awt.headless=true -Dsun.lang.ClassLoader.allowArraySyntax=true -Djboss.server.default.config=standalone-full.xml -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.security.manager -Djava.security.policy==/users/rhq/rhq-server-4.7.0/bin/rhq-server.security-policy -Dorg.apache.coyote.http11.Http11Protocol.COMPRESSION=on -Dorg.apache.coyote.http11.Http11Protocol.COMPRESSION_MIME_TYPES=text/javascript,text/css,text/html -Dorg.jboss.boot.log.file=/users/rhq/rhq-server-4.7.0/logs/server.log -Dlogging.configuration=file:/users/rhq/rhq-server-4.7.0/jbossas/standalone/configuration/logging.properties -jar /users/rhq/rhq-server-4.7.0/jbossas/jboss-modules.jar -mp /users/rhq/rhq-server-4.7.0/modules:/users/rhq/rhq-server-4.7.0/jbossas/modules -jaxpmodule javax.xml.jaxp-provider org.jboss.as.standalone -Djboss.home.dir=/users/rhq/rhq-server-4.7.0/jbossas -Djboss.server.base.dir=/users/rhq/rhq-server-4.7.0/jbossas/standalone -P /users/rhq/rhq-server-4.7.0/bin/rhq-server.properties
+sridharm 22033 21804  0 22:00 pts/2    00:00:00 grep jboss
+
